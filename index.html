@@ -22,15 +22,18 @@
     <div id="main-content" class="flex">
         <div id="sidebar" class="border-r flex-grow-0">
             <input type="search" name="list-search" id="list-search" placeholder="Search Lists" class="border border-solid rounded-xl m-1 p-1">
-            <span id="add" class="m-1 p-1 cursor-pointer"><i class="fa-solid fa-plus"></i></span>
+            <span id="list-add" class="m-1 p-1 cursor-pointer"><i class="fa-solid fa-plus"></i></span>
             <h4 class="list">List name</h4>
         </div>
         <div id="list" class="flex-grow">
-            <h1 id="list_name" class="text-4xl p-2">Test list</h1>
+            <div class="flex justify-between items-center">
+                <h1 id="list_name" class="text-4xl p-2">Test list</h1>
+                <i id="item-add" class="fa-solid fa-plus p-2 cursor-pointer"></i>
+            </div>
             <hr>
-            <div id="items">
-                <input type="checkbox" name="item1" class="item">
-                <label for="item1">Something I need to do</label>
+            <div class="item">
+                <input type="checkbox" name="something-i-need-to-do">
+                <label for="something-i-need-to-do">Something I need to do</label>
             </div>
         </div>
     </div>
