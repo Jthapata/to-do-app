@@ -1,6 +1,6 @@
 * {
     font-family: 'Handlee', cursive;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .list {
     margin: .5rem;
@@ -17,5 +17,5 @@
 }
 .item {
     margin: 1rem;
-    
+
 }
