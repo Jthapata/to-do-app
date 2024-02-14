@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
+    <script defer src="add-list.js"></script>
     <title>To-DOOO</title>
 </head>
 <body class="flex flex-col">
@@ -37,8 +38,16 @@
             </div>
         </div>
     </div>
-    <div id="display-add-list" class="no-display"></div>
-    <div id="display-add-item" class="no-display"></div>
+    <div id="display-add-list" class="no-display">
+        <input type="text" id="new-list-name" placeholder="Enter new list">
+        <button id="new-list-button">Add</button>
+        <button id="cancel-new-list-button">Cancel</button>
+    </div>
+    <div id="display-add-item" class="no-display">
+        <input type="text" id="new-item-name" placeholder="Enter new item">
+        <button id="new-item-button">Add</button>
+        <button id="cancel-new-item-button">Cancel</button>
+    </div>
 
     <script src="https://kit.fontawesome.com/5f57553318.js" crossorigin="anonymous"></script>
 </body>
