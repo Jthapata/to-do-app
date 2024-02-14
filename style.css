@@ -11,6 +11,15 @@ body {
 #list {
     flex-grow: 10;
 }
+.no-display {
+    display: none;
+}
+.active-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+}
 .list {
     margin: .5rem;
     border: solid 1px rgb(75 85 99);
