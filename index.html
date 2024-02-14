@@ -11,7 +11,7 @@
     <script defer src="main.js"></script>
     <title>To-DOOO</title>
 </head>
-<body>
+<body class="flex flex-col">
     <header class="flex justify-around p-5 bg-gray-600 text-white items-center">
         <h3 class="text-2xl">To-DOOO</h3>
         <div>
@@ -19,16 +19,16 @@
             <i class="fa-solid fa-circle-user p-1 cursor-pointer"></i>
         </div>
     </header>
-    <div id="main-content" class="flex">
-        <div id="sidebar" class="border-r flex-grow-0">
-            <input type="search" name="list-search" id="list-search" placeholder="Search Lists" class="border border-solid rounded-xl m-1 p-1">
-            <span id="list-add" class="m-1 p-1 cursor-pointer"><i class="fa-solid fa-plus"></i></span>
-            <h4 class="list">List name</h4>
+    <div id="main-content" class="flex min-h-max flex-grow">
+        <div id="sidebar" class="border-r h-full">
+            <input type="search" id="list-search" placeholder="Search Lists" class="border border-solid rounded-xl m-1 p-2 w-3/4">
+            <span id="list-add"><i class="fa-solid fa-plus m-1 p-1 cursor-pointer"></i></span>
+            <h4 class="list">Test List</h4>
         </div>
-        <div id="list" class="flex-grow">
+        <div id="list">
             <div class="flex justify-between items-center">
-                <h1 id="list_name" class="text-4xl p-2">Test list</h1>
-                <i id="item-add" class="fa-solid fa-plus p-2 cursor-pointer"></i>
+                <h1 id="list_name" class="text-4xl p-2 flex-grow text-center">Test list</h1>
+                <i id="item-add" class="fa-solid fa-plus p-2 mr-4 cursor-pointer"></i>
             </div>
             <hr>
             <div class="item">

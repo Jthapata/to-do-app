@@ -2,6 +2,15 @@
     font-family: 'Handlee', cursive;
     letter-spacing: 1px;
 }
+body {
+    height: 100vh;
+}
+#sidebar {
+    flex-grow: 1;
+}
+#list {
+    flex-grow: 10;
+}
 .list {
     margin: .5rem;
     border: solid 1px rgb(75 85 99);
@@ -17,5 +26,8 @@
 }
 .item {
     margin: 1rem;
-
+    text-align: center;
+}
+.selected {
+    background-color: rgb(229, 86, 229);
 }
