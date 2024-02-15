@@ -1,0 +1,17 @@
+{
+    "lists": [
+      {
+        "name": "Test list",
+        "tasks": [
+          {
+            "text": "Something I need to do",
+            "completed": false
+          },
+          {
+            "text": "Call dentist",
+            "completed": true
+          }
+        ]
+      }
+    ]
+}
