@@ -8,8 +8,11 @@ body {
 #sidebar {
     flex-grow: 1;
 }
-#list {
+#taskList {
     flex-grow: 10;
+}
+label {
+    margin-left: .5rem;
 }
 .no-display {
     display: none;
@@ -45,19 +48,19 @@ body {
 .selected {
     background-color: rgb(229, 86, 229);
 }
-#new-list-name {
+#new-list-name, #new-item-name {
     border-radius: 5px;
     padding: .5rem;
     color: black;
 }
-#new-list-button {
+#new-list-button, #new-item-button {
     background-color: green;
     border: solid 1px black;
     margin-left: .5rem;
     border-radius: 5px;
     padding: .5rem;
 }
-#cancel-new-list-button {
+#cancel-new-list-button, #cancel-new-item-button {
     background-color: red;
     border: solid 1px black;
     margin-left: .5rem;

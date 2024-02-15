@@ -2,7 +2,7 @@ const addListButton = document.getElementById('list-add')
 const newListName = document.getElementById('new-list-name')
 const newListButton = document.getElementById('new-list-button')
 const cancelNewList = document.getElementById('cancel-new-list-button')
-const display = document.getElementById('display-add-list')
+const listDisplay = document.getElementById('display-add-list')
 const sidebar = document.getElementById('sidebar')
 
 function addList (name){
@@ -13,17 +13,17 @@ function addList (name){
 }
 
 addListButton.addEventListener('click', function() {
-    display.className = 'active-display';
+    listDisplay.className = 'active-display';
 })
 
 newListButton.addEventListener('click', function() {
     let name = newListName.value
     addList(name)
-    display.className = 'no-display'
+    listDisplay.className = 'no-display'
     newListName.value = ''
 })
 
 cancelNewList.addEventListener('click', function() {
-    display.className = 'no-display'
+    listDisplay.className = 'no-display'
     newListName.value = ''
 })
