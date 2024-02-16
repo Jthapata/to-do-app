@@ -42,8 +42,18 @@ label {
     cursor: pointer;
 }
 .item {
-    margin: 1rem;
-    text-align: center;
+    padding: .25rem;
+}
+.item:hover {
+    border: solid 1px black;
+    border-radius: 10px;
+}
+#deleteItem {
+    display: none;
+}
+.item:hover #deleteItem {
+    display: inline;
+    cursor: pointer;
 }
 .selected {
     background-color: rgb(229, 86, 229);
