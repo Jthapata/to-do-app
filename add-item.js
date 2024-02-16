@@ -11,14 +11,11 @@ function addItem (name) {
     let newLabel = document.createElement('label')
     newLabel.setAttribute('for', name)
     newLabel.innerHTML = name
-    console.log(newLabel)
     newInput.type = 'checkbox'
     newInput.name = name
-    console.log(newInput)
     newDiv.append(newInput)
     newDiv.append(newLabel)
     newDiv.className = 'item'
-    console.log(newDiv)
     taskList.append(newDiv)
 }
 
