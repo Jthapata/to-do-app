@@ -47,6 +47,7 @@ label {
 h4:hover #deleteList {
     display: inline;
     cursor: pointer;
+    color: rgb(255, 60, 60);
 }
 .item {
     padding: .25rem;
@@ -61,9 +62,6 @@ h4:hover #deleteList {
 .item:hover #deleteItem {
     display: inline;
     cursor: pointer;
-}
-.selected {
-    background-color: rgb(229, 86, 229);
 }
 #new-list-name, #new-item-name {
     border-radius: 5px;
