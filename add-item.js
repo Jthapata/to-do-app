@@ -21,6 +21,9 @@ function addItem (name) {
     newDiv.append(newDelete)
     newDiv.className = 'item'
     taskList.append(newDiv)
+    newDelete.addEventListener('click', function() {
+        newDiv.remove()
+    })
 }
 
 addItemButton.addEventListener('click', function () {
