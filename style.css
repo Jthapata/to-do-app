@@ -41,6 +41,13 @@ label {
     font-weight: bold;
     cursor: pointer;
 }
+#deleteList {
+    display: none;
+}
+h4:hover #deleteList {
+    display: inline;
+    cursor: pointer;
+}
 .item {
     padding: .25rem;
 }

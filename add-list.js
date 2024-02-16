@@ -7,9 +7,16 @@ const sidebar = document.getElementById('sidebar')
 
 function addList (name){
     let newH4 = document.createElement('h4')
+    let itemDelete = document.createElement('i')
+    itemDelete.id = 'deleteList'
+    itemDelete.setAttribute('class', 'fa-solid fa-trash-can ml-3')
     newH4.innerHTML = name
     newH4.classList.add('list')
+    newH4.append(itemDelete)
     sidebar.append(newH4)
+    itemDelete.addEventListener('click', function() {
+        newH4.remove()
+    })
 }
 
 addListButton.addEventListener('click', function() {
