@@ -37,6 +37,13 @@ newItemButton.addEventListener('click', function () {
     newItemName.value = ''
 })
 
+newItemName.addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        newItemButton.click();
+    }
+})
+
 cancelNewItem.addEventListener('click', function () {
     itemDisplay.className = 'no-display'
     newItemName.value = ''

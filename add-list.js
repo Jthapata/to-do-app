@@ -30,6 +30,13 @@ newListButton.addEventListener('click', function() {
     newListName.value = ''
 })
 
+newListName.addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        newListButton.click();
+    }
+})
+
 cancelNewList.addEventListener('click', function() {
     listDisplay.className = 'no-display'
     newListName.value = ''
