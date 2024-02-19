@@ -3,27 +3,13 @@ const newItemName = document.getElementById('new-item-name')
 const newItemButton = document.getElementById('new-item-button')
 const cancelNewItem = document.getElementById('cancel-new-item-button')
 const itemDisplay = document.getElementById('display-add-item')
-const taskList = document.getElementById('itemList')
 
-function addItem (name) {
-    let newDiv = document.createElement('div')
-    let newInput = document.createElement('input')
-    let newLabel = document.createElement('label')
-    let newDelete = document.createElement('i')
-    newDelete.id = 'deleteItem'
-    newDelete.setAttribute('class', 'fa-solid fa-trash-can ml-3')
-    newLabel.setAttribute('for', name)
-    newLabel.innerHTML = name
-    newInput.type = 'checkbox'
-    newInput.name = name
-    newDiv.append(newInput)
-    newDiv.append(newLabel)
-    newDiv.append(newDelete)
-    newDiv.className = 'item'
-    taskList.append(newDiv)
-    newDelete.addEventListener('click', function() {
-        newDiv.remove()
-    })
+
+function addItemToStorage (name) {
+    var listName = document.getElementById('list_name').textContent
+    let storageList = localStorage.getItem(listName)
+    storageList += `, ${name}`
+    localStorage.setItem(listName, storageList)
 }
 
 addItemButton.addEventListener('click', function () {
@@ -32,9 +18,11 @@ addItemButton.addEventListener('click', function () {
 
 newItemButton.addEventListener('click', function () {
     let name = newItemName.value
-    addItem(name)
+    addItemToStorage(name)
     itemDisplay.className = 'no-display'
     newItemName.value = ''
+    var listName = document.getElementById('list_name').textContent
+    renderItems(listName)
 })
 
 newItemName.addEventListener('keypress', function(event) {

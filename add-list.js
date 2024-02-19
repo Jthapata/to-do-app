@@ -3,20 +3,10 @@ const newListName = document.getElementById('new-list-name')
 const newListButton = document.getElementById('new-list-button')
 const cancelNewList = document.getElementById('cancel-new-list-button')
 const listDisplay = document.getElementById('display-add-list')
-const sidebar = document.getElementById('sidebar')
 
-function addList (name){
-    let newH4 = document.createElement('h4')
-    let itemDelete = document.createElement('i')
-    itemDelete.id = 'deleteList'
-    itemDelete.setAttribute('class', 'fa-solid fa-trash-can ml-3')
-    newH4.innerHTML = name
-    newH4.classList.add('list')
-    newH4.append(itemDelete)
-    sidebar.append(newH4)
-    itemDelete.addEventListener('click', function() {
-        newH4.remove()
-    })
+function addListToStorage (name){
+    localStorage.setItem(name, '')
+    renderLists()
 }
 
 addListButton.addEventListener('click', function() {
@@ -25,9 +15,10 @@ addListButton.addEventListener('click', function() {
 
 newListButton.addEventListener('click', function() {
     let name = newListName.value
-    addList(name)
+    addListToStorage(name)
     listDisplay.className = 'no-display'
     newListName.value = ''
+    console.log(localStorage)
 })
 
 newListName.addEventListener('keypress', function(event) {
