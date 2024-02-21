@@ -2,6 +2,7 @@
 // bonus: animate creating and deleting task/list
 // bug: when a new list is created it removes the items from display
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
+// bonus: add css to checkbox and checked state
 
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
