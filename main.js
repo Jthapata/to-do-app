@@ -12,6 +12,7 @@ function addList(name) {
     newH4.append(itemDelete)
     sidebar.append(newH4)
     newH4.addEventListener('click', function() {
+        console.log('clicked list')
         renderItems(newH4.textContent)
     })
     itemDelete.addEventListener('click', function() {

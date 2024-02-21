@@ -45,6 +45,7 @@ label {
     display: none;
 }
 h4:hover #deleteList {
+    z-index: 2;
     display: inline;
     cursor: pointer;
     color: rgb(255, 60, 60);
