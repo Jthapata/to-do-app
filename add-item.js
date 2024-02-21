@@ -13,7 +13,7 @@ function addItemToStorage (name) {
     if (storageList === '') {
         storageList += `${name}`
     } else {
-        storageList += `, ${name}`
+        storageList += `,${name}`
     }
     localStorage.setItem(listName, storageList)
 }

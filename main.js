@@ -1,3 +1,4 @@
+localStorage.setItem('test', 'lemonade, orangejuice, pizza')
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
 
@@ -27,6 +28,7 @@ function addList(name) {
 }
 
 function addItem(name) {
+    let listNameToDisplay = document.getElementById('list_name').textContent
     let newDiv = document.createElement('div')
     let newInput = document.createElement('input')
     let newLabel = document.createElement('label')
@@ -44,7 +46,12 @@ function addItem(name) {
     taskList.append(newDiv)
     newDelete.addEventListener('click', function() {
         newDiv.remove()
-        // add code to remove the item from the localStorage list
+        let items = localStorage.getItem(listNameToDisplay)
+        let itemArray = items.split(',')
+        itemArray.pop(name)
+        let updatedArray = itemArray.toString();
+        localStorage.setItem(listNameToDisplay, updatedArray)
+        renderItems(listNameToDisplay)
     })
 }
 
@@ -61,9 +68,9 @@ function renderItems(listNameToDisplay) {
     taskList.innerHTML = ''
     let displayListName = document.getElementById('list_name')
     displayListName.innerHTML = listNameToDisplay
-    items = localStorage.getItem(listNameToDisplay)
+    let items = localStorage.getItem(listNameToDisplay)
     if (items !== '') {
-        itemArray = items.split(', ')
+        let itemArray = items.split(',')
         for (it of itemArray) {
             addItem(it)
         }
