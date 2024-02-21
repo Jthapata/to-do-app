@@ -1,3 +1,8 @@
+// required: need to be able to edit tasks
+// bonus: animate creating and deleting task/list
+// bug: when a new list is created it removes the items from display
+// bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
+
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
 
@@ -30,16 +35,16 @@ function addItem(name) {
     let listNameToDisplay = document.getElementById('list_name').textContent
     let newDiv = document.createElement('div')
     let newInput = document.createElement('input')
-    let newLabel = document.createElement('label')
+    let newP = document.createElement('p')
     let newDelete = document.createElement('i')
     newDelete.id = 'deleteItem'
     newDelete.setAttribute('class', 'fa-solid fa-trash-can ml-3')
-    newLabel.setAttribute('for', name)
-    newLabel.innerHTML = name
+    newP.setAttribute('for', name)
+    newP.innerHTML = name
     newInput.type = 'checkbox'
     newInput.name = name
     newDiv.append(newInput)
-    newDiv.append(newLabel)
+    newDiv.append(newP)
     newDiv.append(newDelete)
     newDiv.className = 'item'
     taskList.append(newDiv)
