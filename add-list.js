@@ -18,7 +18,6 @@ newListButton.addEventListener('click', function() {
     addListToStorage(name)
     listDisplay.className = 'no-display'
     newListName.value = ''
-    console.log(localStorage)
 })
 
 newListName.addEventListener('keypress', function(event) {

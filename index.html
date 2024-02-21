@@ -16,15 +16,14 @@
 <body class="flex flex-col">
     <header class="flex justify-around p-5 bg-gray-600 text-white items-center">
         <h3 class="text-2xl">To-DOOO</h3>
-        <div>
+        <!-- <div>
             <i class="fa-solid fa-gear p-1 cursor-pointer"></i>
             <i class="fa-solid fa-circle-user p-1 cursor-pointer"></i>
-        </div>
+        </div> -->
     </header>
     <div id="main-content" class="flex min-h-max flex-grow">
         <div id="sidebar" class="border-r h-full">
-            <input type="search" id="list-search" placeholder="Search Lists" class="border border-solid rounded-xl m-1 p-2 w-3/4">
-            <span id="list-add"><i class="fa-solid fa-plus m-1 p-1 cursor-pointer"></i></span>
+            <h1 id="list-add">Create List</h1>
             <div id="Lists"></div>
         </div>
         <div id="taskList">
@@ -45,6 +44,11 @@
         <input type="text" id="new-item-name" placeholder="Enter new item">
         <button id="new-item-button">Add</button>
         <button id="cancel-new-item-button">Cancel</button>
+    </div>
+    <div id="no-list-selected" class="no-display">
+        <h1>No List Selected</h1>
+        <h1>Please Select A list</h1>
+        <button id="no-list-button">OK</button>
     </div>
 
     <script src="https://kit.fontawesome.com/5f57553318.js" crossorigin="anonymous"></script>
