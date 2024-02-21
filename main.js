@@ -1,4 +1,3 @@
-localStorage.setItem('test', 'lemonade, orangejuice, pizza')
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
 
