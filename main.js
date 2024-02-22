@@ -1,5 +1,5 @@
 // required: need to be able to edit tasks
-// required: add checked value to items that saves in localstorage
+// required: add checked value to items that saves in localstorage and add css to checked items
 // bonus: animate creating and deleting task/list
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
 // bug: when a list is deleted it removes the items from display
