@@ -13,7 +13,8 @@ body {
     flex-grow: 10;
 }
 p {
-    margin: 0 .5rem;
+    margin: 0 2rem 0 .5rem;
+    font-size: large;
 }
 #list-add {
     cursor: pointer;
@@ -71,13 +72,21 @@ p {
     margin-top: .25rem;
     padding: .5rem;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     border: solid 1px black;
     border-radius: 10px;
 }
-.item:hover #deleteItem {
-    display: inline;
+.item #deleteItem:hover {
     cursor: pointer;
+    color: rgb(255, 60, 60);
+}
+.editButton {
+    font-size: small;
+    margin-left: .5rem;
+    font-weight: bolder;
+}
+.editButton:hover {
+    color: rgb(255, 60, 60);
 }
 #new-list-name, #new-item-name {
     border-radius: 5px;

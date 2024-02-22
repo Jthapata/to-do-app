@@ -41,16 +41,18 @@ function addItem(name, bool) {
     let newInput = document.createElement('input')
     let newP = document.createElement('p')
     let newDelete = document.createElement('i')
+    let editButton = document.createElement('button')
+    editButton.innerHTML = 'Edit'
+    editButton.className = 'editButton'
     newDelete.id = 'deleteItem'
     newDelete.setAttribute('class', 'fa-solid fa-trash-can ml-3')
-    newP.setAttribute('for', name)
     newP.innerHTML = name
     newInput.type = 'checkbox'
-    newInput.name = name
     newInput.checked = bool
     newDiv.append(newInput)
     newDiv.append(newP)
     newDiv.append(newDelete)
+    newDiv.append(editButton)
     newDiv.className = 'item'
     taskList.append(newDiv)
     newDelete.addEventListener('click', function() {
