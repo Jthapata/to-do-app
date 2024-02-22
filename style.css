@@ -88,20 +88,20 @@ p {
 .editButton:hover {
     color: rgb(255, 60, 60);
 }
-#new-list-name, #new-item-name {
+#new-list-name, #new-item-name, #edit-item-name {
     border-radius: 5px;
     padding: .5rem;
     color: black;
     text-align: center;
 }
-#new-list-button, #new-item-button, #no-list-button {
+#new-list-button, #new-item-button, #no-list-button, #edit-item-button {
     background-color: green;
     border: solid 1px black;
     margin: .5rem;
     border-radius: 5px;
     padding: .5rem;
 }
-#cancel-new-list-button, #cancel-new-item-button {
+#cancel-new-list-button, #cancel-new-item-button, #cancel-edit-item-button {
     background-color: red;
     border: solid 1px black;
     border-radius: 5px;

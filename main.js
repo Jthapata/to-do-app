@@ -1,4 +1,4 @@
-// required: need to be able to edit tasks
+// required: add functionality to edit item screen line 93
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
 // bug: when a list is deleted it removes the items from display
 // code change: move css from css file to html file for create list button
@@ -83,6 +83,23 @@ function addItem(name, bool) {
             localStorage.setItem(listNameToDisplay, updatedObject)
             renderItems(listNameToDisplay)
         }
+    })
+    editButton.addEventListener('click', function() {
+        editDisplay.className = 'active-display'
+        const editItemButton = document.getElementById('edit-item-button')
+        
+        function editItem(oldName, newName) {
+            console.log(oldName, newName)
+            //add code for edit funcionality 
+            //maybe use 3 functions that each have 2 params, and they pass params to eachother
+        }
+
+        editItemButton.addEventListener('click', function () {
+            let newName = editItemName.value
+            editItem(newP.textContent, newName)
+            editDisplay.className = 'no-display'
+            editItemName.value = ''
+        })
     })
 }
 

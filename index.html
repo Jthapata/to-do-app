@@ -11,6 +11,7 @@
     <script defer src="main.js"></script>
     <script defer src="add-list.js"></script>
     <script defer src="add-item.js"></script>
+    <script defer src="edit-item.js"></script>
     <title>To-DOOO</title>
 </head>
 <body class="flex flex-col">
@@ -49,6 +50,11 @@
         <h1>No List Selected</h1>
         <h1>Please Select A list</h1>
         <button id="no-list-button">OK</button>
+    </div>
+    <div id="display-edit-item" class="no-display">
+        <input type="text" id="edit-item-name" placeholder="Enter new name">
+        <button id="edit-item-button">Change</button>
+        <button id="cancel-edit-item-button">Cancel</button>
     </div>
 
     <script src="https://kit.fontawesome.com/5f57553318.js" crossorigin="anonymous"></script>
