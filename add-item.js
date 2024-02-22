@@ -11,9 +11,13 @@ function addItemToStorage (name) {
     let listName = document.getElementById('list_name').textContent
     let storageList = localStorage.getItem(listName)
     if (storageList === '') {
-        storageList += `${name}`
+        let itemObject = {}
+        itemObject[name] = false
+        storageList = JSON.stringify(itemObject)
     } else {
-        storageList += `,${name}`
+        let storageObject = JSON.parse(storageList)
+        storageObject[name] = false
+        storageList = JSON.stringify(storageObject)
     }
     localStorage.setItem(listName, storageList)
 }

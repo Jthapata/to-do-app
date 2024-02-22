@@ -21,7 +21,6 @@ function addList(name) {
     newListDiv.append(itemDelete)
     sidebar.append(newListDiv)
     newH4.addEventListener('click', function() {
-        console.log('clicked list')
         renderItems(newH4.textContent)
     })
     itemDelete.addEventListener('click', function() {
@@ -54,10 +53,10 @@ function addItem(name) {
     newDelete.addEventListener('click', function() {
         newDiv.remove()
         let items = localStorage.getItem(listNameToDisplay)
-        let itemArray = items.split(',')
-        itemArray.pop(name)
-        let updatedArray = itemArray.toString();
-        localStorage.setItem(listNameToDisplay, updatedArray)
+        let ItemsObject = JSON.parse(items)
+        delete ItemsObject[`${newP.textContent}`]
+        updatedObject = JSON.stringify(ItemsObject)
+        localStorage.setItem(listNameToDisplay, updatedObject)
         renderItems(listNameToDisplay)
     })
 }
@@ -76,8 +75,8 @@ function renderItems(listNameToDisplay) {
     displayListName.innerHTML = listNameToDisplay
     let items = localStorage.getItem(listNameToDisplay)
     if (items !== '') {
-        let itemArray = items.split(',')
-        for (it of itemArray) {
+        let itemsObject = JSON.parse(items)
+        for (it in itemsObject) {
             addItem(it)
         }
     }
