@@ -2,8 +2,10 @@
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
 // bug: when a list is deleted it removes the items from display
 // code change: move css from css file to html file for create list button
+// bonus: user can't add blank list or item
 // bonus: add css to item when checked
 // bonus: animate creating and deleting task/list
+// bonus: change css for lists
 
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')

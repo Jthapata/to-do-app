@@ -68,6 +68,7 @@ p {
     color: rgb(255, 60, 60);
 }
 .item {
+    margin-top: .25rem;
     padding: .5rem;
     display: flex;
     align-items: center;
