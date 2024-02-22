@@ -1,8 +1,9 @@
 // required: need to be able to edit tasks
+// required: add checked value to items that saves in localstorage
 // bonus: animate creating and deleting task/list
-// bug: when a new list is created it removes the items from display
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
-// bonus: add css to checkbox and checked state
+// bug: when a list is deleted it removes the items from display
+// code change: move css from css file to html file for create list button
 
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
@@ -20,6 +21,7 @@ function addList(name) {
     newListDiv.append(itemDelete)
     sidebar.append(newListDiv)
     newH4.addEventListener('click', function() {
+        console.log('clicked list')
         renderItems(newH4.textContent)
     })
     itemDelete.addEventListener('click', function() {
@@ -62,7 +64,6 @@ function addItem(name) {
 
 function renderLists() {
     sidebar.innerHTML = ''
-    taskList.innerHTML = ''
     let lists = Object.keys(localStorage)
     for (li of lists) {
         addList(li)
