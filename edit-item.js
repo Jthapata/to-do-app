@@ -12,6 +12,9 @@ function displayEditModal(name) {
 }
 
 function editStorage(oldname, newname) {
+    if (oldname === newname) {
+        return
+    }
     let currentListName = document.getElementById('list_name').textContent
     let storageItem = localStorage.getItem(currentListName)
     let jsonStorage = JSON.parse(storageItem)
