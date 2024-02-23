@@ -1,4 +1,4 @@
-// required: add functionality to edit item screen line 93
+// required: add functionality to edit item screen
 // bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
 // bug: when a list is deleted it removes the items from display
 // code change: move css from css file to html file for create list button
@@ -84,23 +84,6 @@ function addItem(name, bool) {
             renderItems(listNameToDisplay)
         }
     })
-    editButton.addEventListener('click', function() {
-        editDisplay.className = 'active-display'
-        const editItemButton = document.getElementById('edit-item-button')
-        
-        function editItem(oldName, newName) {
-            console.log(oldName, newName)
-            //add code for edit funcionality 
-            //maybe use 3 functions that each have 2 params, and they pass params to eachother
-        }
-
-        editItemButton.addEventListener('click', function () {
-            let newName = editItemName.value
-            editItem(newP.textContent, newName)
-            editDisplay.className = 'no-display'
-            editItemName.value = ''
-        })
-    })
 }
 
 function renderLists() {
@@ -122,6 +105,13 @@ function renderItems(listNameToDisplay) {
             addItem(it, itemsObject[it])
         }
     }
+    editItemButtons = document.querySelectorAll('.editButton')
+    editItemButtons.forEach((button) => {
+        button.addEventListener('click', function() {
+            let itemToEdit = button.parentElement.childNodes[1].textContent
+            displayEditModal(itemToEdit)
+        })
+    })
 }
 
 renderLists()
