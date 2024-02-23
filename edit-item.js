@@ -10,6 +10,14 @@ function displayEditModal(name) {
     oldName = name
 }
 
+// some function with 2 parameters that is called on line 17
+
+changeItemButton.addEventListener('click', function() {
+    let newName = editItemName.value
+    // some function with 2 parameters
+    editDisplay.className = 'no-display'
+    editItemName.value = ''
+})
 
 editItemName.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
