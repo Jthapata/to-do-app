@@ -1,3 +1,4 @@
+// bug: editing an item to the same name deletes the item
 // code change: move css from css file to html file for create list button
 // bonus: user can't add blank list or item
 // bonus: add css to item when checked
