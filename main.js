@@ -1,5 +1,3 @@
-// bug: when there is a pop up, make the background unclickable, that way you can't bring up multiple pop ups
-// bug: when a list is deleted it removes the items from display
 // code change: move css from css file to html file for create list button
 // bonus: user can't add blank list or item
 // bonus: add css to item when checked
@@ -28,9 +26,11 @@ function addList(name) {
     itemDelete.addEventListener('click', function() {
         localStorage.removeItem(newH4.textContent)
         newListDiv.remove()
-        taskList.innerHTML = ''
         let displayListName = document.getElementById('list_name')
-        displayListName.innerHTML = ''
+        if (name === displayListName.textContent) {
+            taskList.innerHTML = ''
+            displayListName.innerHTML = ''
+        }
         renderLists()
     })
 }
