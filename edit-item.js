@@ -10,11 +10,19 @@ function displayEditModal(name) {
     oldName = name
 }
 
-// some function with 2 parameters that is called on line 17
+function editStorage(oldname, newname) {
+    let currentListName = document.getElementById('list_name').textContent
+    let storageItem = localStorage.getItem(currentListName)
+    let jsonStorage = JSON.parse(storageItem)
+    delete Object.assign(jsonStorage, {[newname]: jsonStorage[oldname]}) [oldname]
+    jsonStorage = JSON.stringify(jsonStorage)
+    localStorage.setItem(currentListName, jsonStorage)
+    renderItems(currentListName)
+}
 
 changeItemButton.addEventListener('click', function() {
     let newName = editItemName.value
-    // some function with 2 parameters
+    editStorage(oldName, newName)
     editDisplay.className = 'no-display'
     editItemName.value = ''
 })

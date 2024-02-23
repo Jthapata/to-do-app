@@ -69,7 +69,6 @@ function addItem(name, bool) {
             let items = localStorage.getItem(listNameToDisplay)
             let ItemsObject = JSON.parse(items)
             ItemsObject[newP.textContent] = true
-            console.log(ItemsObject)
             updatedObject = JSON.stringify(ItemsObject)
             localStorage.setItem(listNameToDisplay, updatedObject)
             renderItems(listNameToDisplay)
@@ -78,7 +77,6 @@ function addItem(name, bool) {
             let items = localStorage.getItem(listNameToDisplay)
             let ItemsObject = JSON.parse(items)
             ItemsObject[newP.textContent] = false
-            console.log(ItemsObject)
             updatedObject = JSON.stringify(ItemsObject)
             localStorage.setItem(listNameToDisplay, updatedObject)
             renderItems(listNameToDisplay)
