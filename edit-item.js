@@ -7,6 +7,7 @@ var oldName;
 
 function displayEditModal(name) {
     editDisplay.className = 'active-display'
+    overlay.className = 'active-overlay'
     oldName = name
 }
 
@@ -25,6 +26,7 @@ changeItemButton.addEventListener('click', function() {
     editStorage(oldName, newName)
     editDisplay.className = 'no-display'
     editItemName.value = ''
+    overlay.className = 'hide-overlay'
 })
 
 editItemName.addEventListener('keypress', function(event) {
@@ -37,4 +39,5 @@ editItemName.addEventListener('keypress', function(event) {
 cancelChangeItem.addEventListener('click', function() {
     editDisplay.className = 'no-display'
     editItemName.value = ''
+    overlay.className = 'hide-overlay'
 })

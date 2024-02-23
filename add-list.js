@@ -11,6 +11,7 @@ function addListToStorage (name){
 
 addListButton.addEventListener('click', function() {
     listDisplay.className = 'active-display';
+    overlay.className = 'active-overlay'
 })
 
 newListButton.addEventListener('click', function() {
@@ -18,6 +19,7 @@ newListButton.addEventListener('click', function() {
     addListToStorage(name)
     listDisplay.className = 'no-display'
     newListName.value = ''
+    overlay.className = 'hide-overlay'
 })
 
 newListName.addEventListener('keypress', function(event) {
@@ -30,4 +32,5 @@ newListName.addEventListener('keypress', function(event) {
 cancelNewList.addEventListener('click', function() {
     listDisplay.className = 'no-display'
     newListName.value = ''
+    overlay.className = 'hide-overlay'
 })
