@@ -1,6 +1,4 @@
-// code change: move css from css file to html file for create list button
 // bonus: user can't add blank list or item
-// bonus: add css to item when checked
 // bonus: animate creating and deleting task/list
 // bonus: change css for lists
 

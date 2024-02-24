@@ -52,7 +52,9 @@ p {
     cursor: pointer;
 }
 .list:hover #deleteList {
-    display: inline;
+    color: white;
+}
+.list #deleteList:hover {
     cursor: pointer;
     color: rgb(255, 60, 60);
 }
