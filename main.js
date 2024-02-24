@@ -1,5 +1,3 @@
-// bonus: change css for lists
-
 const sidebar = document.getElementById('Lists')
 const taskList = document.getElementById('itemList')
 const overlay = document.getElementById('overlay')
