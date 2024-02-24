@@ -11,10 +11,12 @@ function addListToStorage (name){
 function activeListDisplay() {
     listDisplay.className = 'active-display';
     overlay.className = 'active-overlay'
+    newListName.focus()
 }
 function hideListDisplay() {
     listDisplay.className = 'no-display'
     newListName.value = ''
+    newListName.blur()
     overlay.className = 'hide-overlay'
 }
 

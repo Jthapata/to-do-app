@@ -1,4 +1,3 @@
-// bonus: animate creating and deleting task/list
 // bonus: change css for lists
 
 const sidebar = document.getElementById('Lists')

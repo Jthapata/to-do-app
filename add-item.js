@@ -28,6 +28,7 @@ addItemButton.addEventListener('click', function () {
         noListDisplay.className = 'active-display'
     } else {
         itemDisplay.className = 'active-display';
+        newItemName.focus()
     }
     overlay.className = 'active-overlay'
 })
@@ -40,6 +41,7 @@ newItemButton.addEventListener('click', function () {
     addItemToStorage(name)
     itemDisplay.className = 'no-display'
     newItemName.value = ''
+    newItemName.blur()
     overlay.className = 'hide-overlay'
     var listName = document.getElementById('list_name').textContent
     renderItems(listName)
@@ -55,6 +57,7 @@ newItemName.addEventListener('keypress', function(event) {
 cancelNewItem.addEventListener('click', function () {
     itemDisplay.className = 'no-display'
     newItemName.value = ''
+    newItemName.blur()
     overlay.className = 'hide-overlay'
 })
 
