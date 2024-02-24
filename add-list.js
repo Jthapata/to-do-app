@@ -8,29 +8,33 @@ function addListToStorage (name){
     localStorage.setItem(name, '')
     renderLists()
 }
-
-addListButton.addEventListener('click', function() {
+function activeListDisplay() {
     listDisplay.className = 'active-display';
     overlay.className = 'active-overlay'
-})
-
-newListButton.addEventListener('click', function() {
-    let name = newListName.value
-    addListToStorage(name)
+}
+function hideListDisplay() {
     listDisplay.className = 'no-display'
     newListName.value = ''
     overlay.className = 'hide-overlay'
-})
+}
 
+addListButton.addEventListener('click', function() {
+    activeListDisplay()
+})
+newListButton.addEventListener('click', function() {
+    let name = newListName.value
+    if (name === '') {
+        return
+    }
+    addListToStorage(name)
+    hideListDisplay()
+})
 newListName.addEventListener('keypress', function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         newListButton.click();
     }
 })
-
 cancelNewList.addEventListener('click', function() {
-    listDisplay.className = 'no-display'
-    newListName.value = ''
-    overlay.className = 'hide-overlay'
+    hideListDisplay()
 })

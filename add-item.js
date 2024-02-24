@@ -34,6 +34,9 @@ addItemButton.addEventListener('click', function () {
 
 newItemButton.addEventListener('click', function () {
     let name = newItemName.value
+    if (name === '') {
+        return
+    }
     addItemToStorage(name)
     itemDisplay.className = 'no-display'
     newItemName.value = ''

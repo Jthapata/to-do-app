@@ -26,6 +26,9 @@ function editStorage(oldname, newname) {
 
 changeItemButton.addEventListener('click', function() {
     let newName = editItemName.value
+    if (newName === '') {
+        return
+    }
     editStorage(oldName, newName)
     editDisplay.className = 'no-display'
     editItemName.value = ''

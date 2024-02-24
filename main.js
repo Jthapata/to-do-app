@@ -1,4 +1,3 @@
-// bonus: user can't add blank list or item
 // bonus: animate creating and deleting task/list
 // bonus: change css for lists
 
